@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Gato Chateau to book cat sitting services in Miami. Planning a trip? Let's chat about keeping your kitty happy while you're away!">
+    <title>Contact Us - Gato Chateau</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="index.html">Gato Chateau</a>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html" class="btn-contact active">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Let's Chat!</h1>
+                <p>Planning a trip? Have questions? We'd love to hear from you and tell you all about how we'll pamper your cat.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <h2>Send Us a Message</h2>
+                        <p class="form-intro">Fill out the form below and we'll get back to you within 24 hours - usually much faster!</p>
+
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service">Service Interested In *</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Select a service</option>
+                                    <option value="in-home">In-Home Cat Sitting</option>
+                                    <option value="boarding">Cat Boarding</option>
+                                    <option value="drop-in">Drop-In Visits</option>
+                                    <option value="medication">Medication Care</option>
+                                    <option value="other">Just Browsing / Questions</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="catName">Your Cat's Name</label>
+                                <input type="text" id="catName" name="catName" placeholder="We love getting to know them by name!">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dates">Trip Dates (if known)</label>
+                                <input type="text" id="dates" name="dates" placeholder="e.g., March 15-22, 2024">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Tell Us About Your Cat! *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="We'd love to hear about their personality, any special needs, or whatever's on your mind..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                        </form>
+
+                        <div id="formSuccess" class="form-message success" style="display: none;">
+                            <p>Wonderful! We received your message and will get back to you within 24 hours. We can't wait to meet your cat!</p>
+                        </div>
+
+                        <div id="formError" class="form-message error" style="display: none;">
+                            <p>Oops! Something went wrong. Please try again or give us a call at (305) 555-CATS.</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info-container">
+                        <h2>Get in Touch</h2>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p><a href="mailto:hello@gatochateau.com">hello@gatochateau.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <p><a href="tel:3055552287">(305) 555-CATS</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h3>Service Area</h3>
+                                <p>Greater Miami Area</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">⏰</div>
+                            <div class="contact-details">
+                                <h3>Hours</h3>
+                                <p>7 days a week<br>7:00 AM - 9:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="emergency-note">
+                            <h4>Need Us Urgently?</h4>
+                            <p>We're here for you - call anytime for urgent cat care needs. Current clients can reach us 24/7.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Common Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>How far in advance should I book?</h3>
+                        <p>We recommend booking at least 1-2 weeks ahead, especially during holidays. But don't worry - we always try to accommodate last-minute requests when we can!</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What happens at the meet & greet?</h3>
+                        <p>We come to your home (free of charge!) to meet your cat, learn about their routine, and answer all your questions. It's also a great way for your cat to get comfortable with us before you leave.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do you care for multiple cats?</h3>
+                        <p>Absolutely! We love multi-cat households. Additional cats are just $10 extra per visit - they usually keep each other company!</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can you give my cat medication?</h3>
+                        <p>Yes! We're experienced with pills, liquids, and even insulin injections. We'll coordinate with your vet if needed and keep detailed logs of every dose.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Prefer to Talk?</h2>
+                    <p>Give us a call at (305) 555-CATS - we love chatting about cats!</p>
+                    <a href="tel:3055552287" class="btn btn-primary btn-large">Call Us Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Gato Chateau</h3>
+                    <p>Miami's trusted cat care specialists. Your cat's happiness is our passion!</p>
+                    <p>Daily photo updates included with every visit.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Get in Touch</h4>
+                    <p>Miami, Florida</p>
+                    <p>Email: hello@gatochateau.com</p>
+                    <p>Phone: (305) 555-CATS</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gato Chateau. Made with love for Miami's cats.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
