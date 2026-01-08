@@ -623,6 +623,35 @@ footer {
     color: white;
 }
 
+/* Instagram Icon in Footer */
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram-icon-svg {
+    width: 28px;
+    height: 28px;
+    color: var(--accent-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.instagram-link:hover .instagram-icon-svg {
+    transform: scale(1.15);
+    color: white;
+}
+
+/* Contact page Instagram icon */
+.contact-icon-svg {
+    color: var(--accent-color);
+}
+
+.contact-icon-svg svg {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
 /* Footer inline links (email, phone) */
 .footer-section p a {
     color: var(--accent-color);
