@@ -6,6 +6,47 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Gato Chateau is a static website for a cat sitting and boarding business in Miami, Florida. It consists of HTML, CSS, and JavaScript with no build system or framework dependencies.
 
+## Business Information
+
+**Business Details:**
+- Business Name: Gato Chateau
+- Founded: 2017 (7+ years of experience)
+- Specialization: Cat sitting and boarding (small dogs also available upon request)
+- Address: 6551 SW 32nd St, Miami, FL 33155 (Coral Terrace)
+- Phone: (305) 403-9487
+- Email: gatochateaumiami@gmail.com
+- Instagram: @gato_chateau
+
+**Service Area:**
+Within 10 miles of 33155, including: Coral Terrace, West Miami, South Miami, Coral Gables, Westchester, and surrounding neighborhoods. Drop-off also available at our location.
+
+## Brand Voice & Messaging
+
+**Tagline:** "At Gato Chateau, every cat is royalty!"
+
+**Tone:** Warm, playful, professional, reassuring
+
+**Key Phrases:**
+- "purr-fect haven"
+- "empathy and patience"
+- "secret sixth sense to soothe whisker-twitchy kitties"
+- "cherished cats, worry-free getaways"
+
+**Focus:** Making anxious cats comfortable, extensive photo updates, personal attention
+
+## Contact Approach
+
+- Primary: Contact form -> email to gatochateaumiami@gmail.com
+- Follow-up: We call to schedule a meet & greet
+- Pricing: "Contact for personalized quote" (display as $XX placeholder)
+- No direct booking system needed yet
+
+## Future Additions (Placeholders)
+
+- Certifications section (Pet First Aid, Fear Free, etc.)
+- Client testimonials from Rover/Meowtel
+- Instagram feed integration
+
 ## Architecture
 
 **Pages:**
