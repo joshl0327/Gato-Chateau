@@ -8,43 +8,45 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            // Get form data
-            const formData = {
-                firstName: document.getElementById('firstName').value,
-                lastName: document.getElementById('lastName').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                service: document.getElementById('service').value,
-                catName: document.getElementById('catName').value,
-                dates: document.getElementById('dates').value,
-                message: document.getElementById('message').value
-            };
+            // Get form values for validation
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
 
             // Basic validation
-            if (!formData.firstName || !formData.lastName || !formData.email || !formData.service || !formData.message) {
+            if (!firstName || !lastName || !email || !service || !message) {
                 showMessage(formError);
                 return;
             }
 
             // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(formData.email)) {
+            if (!emailRegex.test(email)) {
                 showMessage(formError);
                 return;
             }
 
-            // Simulate form submission
-            // In a real application, you would send this data to a server
-            console.log('Form submitted with data:', formData);
-
-            // Show success message
-            showMessage(formSuccess);
-
-            // Reset form
-            contactForm.reset();
-
-            // Optional: Send to a backend or email service
-            // submitToBackend(formData);
+            // Submit to FormSpree
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    showMessage(formSuccess);
+                    contactForm.reset();
+                } else {
+                    showMessage(formError);
+                }
+            })
+            .catch(error => {
+                showMessage(formError);
+            });
         });
     }
 
@@ -65,36 +67,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
 
-    // Optional: Function to submit to a backend service
-    function submitToBackend(formData) {
-        // Example using Fetch API
-        /*
-        fetch('YOUR_BACKEND_URL/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            showMessage(formSuccess);
-            contactForm.reset();
-        })
-        .catch(error => {
-            showMessage(formError);
-        });
-        */
-
-        // Example using EmailJS or similar service
-        /*
-        emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData)
-            .then(function(response) {
-                showMessage(formSuccess);
-                contactForm.reset();
-            }, function(error) {
-                showMessage(formError);
-            });
-        */
-    }
 });

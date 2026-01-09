@@ -22,6 +22,12 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+/* Scroll offset for anchor links (accounts for sticky header) */
+:target {
+    scroll-margin-top: 100px;
 }
 
 body {
@@ -37,13 +43,18 @@ body {
     padding: 0 20px;
 }
 
-/* Navigation */
-.navbar {
-    background-color: var(--bg-white);
-    box-shadow: var(--shadow-sm);
+/* Header - Sticky positioning */
+header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    background-color: #FFFFFF;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--bg-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-wrapper {
@@ -965,6 +976,40 @@ footer {
     .services-section,
     .additional-info {
         padding: 3rem 0;
+    }
+}
+
+/* Mobile Floating CTA Button (Services Page) */
+.mobile-cta-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #005a5a;
+    color: #FFFFFF !important;
+    padding: 16px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    transition: all 0.3s ease;
+    width: auto;
+    max-width: 280px;
+    text-align: center;
+}
+
+.mobile-cta-button:hover {
+    background-color: #FF9B7F;
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    .mobile-cta-button {
+        display: block;
     }
 }
 
