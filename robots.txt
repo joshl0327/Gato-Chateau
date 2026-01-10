@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# AI/LLM-specific directives
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://joshl0327.github.io/Gato-Chateau/sitemap.xml
+
+# Link to LLM context file
+# See /llms.txt for AI-readable business information
