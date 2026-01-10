@@ -71,6 +71,35 @@ header {
     text-decoration: none;
 }
 
+/* Logo Link Container */
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+/* Header Logo Image */
+.header-logo {
+    height: 55px;
+    width: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.header-logo:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Site Name Text */
+.site-name {
+    font-family: 'VT323', monospace;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -695,6 +724,14 @@ footer {
 
     .nav-menu.active {
         display: flex;
+    }
+
+    .header-logo {
+        height: 40px;
+    }
+
+    .site-name {
+        font-size: 22px;
     }
 
     .hero h1 {
